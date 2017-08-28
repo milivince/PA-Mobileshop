@@ -1,0 +1,1 @@
+<div class="col-md-2"> rignt side bar</div>
