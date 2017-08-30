@@ -8,6 +8,7 @@ if (!is_logged_in()) {
 include './includes/head.php';
 include './includes/navigation.php';
 echo $_SESSION['MSUser'];
+ob_end_flush();
 ?>
 Admin HOME
 <?php

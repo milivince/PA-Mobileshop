@@ -25,7 +25,7 @@ function login($user_id) {
     $date = date("Y-m-d H:i:s");
     $db->query("UPDATE users SET last_login = '$date' WHERE id = '$user_id'");
     $_SESSION['success_flash'] = 'Vous êtes connecté ! ';
-    header('Location : index.php');
+    header('Location:index.php');
 }
 
 function is_logged_in() {
