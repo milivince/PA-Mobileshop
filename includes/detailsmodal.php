@@ -24,6 +24,7 @@ ob_end_flush();
                 <button class="close" type="button" onclick="closeModal()" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+                <h4 class="modal-title text-center"><?php echo $product['title'];?></h4>
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
