@@ -17,8 +17,8 @@ $featured = $db->query($sql);
         <div class="col-md-3 text-center">
             <h4><?php echo $product['title']; ?></h4>
             <img src="<?php echo $product['image'];?>" alt="<?php echo $product['title'] ?>" class="img-thumb"/>
-            <p class="list-price text-danger">List Price :  <?php echo money($product['list_price']);?></p>
-            <p class="price">Our price : <?php echo money($product['price']);?></p>
+            <p class="list-price text-danger">Prix catalogue:  <?php echo money($product['list_price']);?></p>
+            <p class="price">Notre prix : <?php echo money($product['price']);?></p>
             <button type="button" class="btn btn-sm btn-success" onclick="detailsmodal(<?php echo $product['id'];?>)">Details</button>
 
         </div>
@@ -28,8 +28,6 @@ $featured = $db->query($sql);
 </div>
 <!-- Ordre à de l'importance-->
 <?php
-
-
 include './includes/rightbar.php';
 include './includes/footer.php';
 ?>

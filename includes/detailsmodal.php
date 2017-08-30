@@ -7,7 +7,7 @@ $sql = "SELECT * FROM products WHERE id='$id'";
 $result = $db->query($sql);
 $product = mysqli_fetch_assoc($result);
 $brand_id = $product['brand'];
-$sql = " SELECT brand FROM brand WHERE id='$brand_id' ";
+$sql = " SELECT brand FROM Brand WHERE id='$brand_id' ";
 $brand_query = $db->query($sql);
 $brand = mysqli_fetch_assoc($brand_query);
 $sizestring = $product['memory'];
@@ -24,7 +24,6 @@ ob_end_flush();
                 <button class="close" type="button" onclick="closeModal()" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title text-center"><?php echo $product['title']; ?></h4>
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -38,8 +37,8 @@ ob_end_flush();
                         <div class="col-sm-6">
                             <p><?php echo nl2br($product['description']); ?></p>
                             <hr>
-                            <p>Price : <?php echo $product['price']; ?></p>
-                            <p>Brand : <?php echo $brand['brand']; ?></p>
+                            <p>Prix : <?php echo money($product['price']); ?></p>
+                            <p>Marque : <?php echo $brand['brand']; ?></p>
                             <form action="add_cart.php" method="post">
                                 <input type="hidden" name="product_id" id="product_id" value="<?= $id; ?>">
                                 <input type="hidden" name="available" id="available" value="">
