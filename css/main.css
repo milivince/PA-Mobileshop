@@ -62,3 +62,18 @@ img.details{
 #add-product-btn{
     margin-top: -35px;    
 }
+
+#login-form{
+    width: 50%;
+    height: 60%;
+    border:  2px solid black;
+    border-radius: 15px;
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.6);
+    margin: 8% auto;
+    padding: 15px;
+    background-color: white;
+    
+}
+.totals-table-header th{
+    text-align: center;
+}
